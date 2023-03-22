@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form asp-action="MyAction" method="post">
+        <input type="text" name="myText" />
+        <input type="submit" value="Submit" />
+    </form>
+ @if (ViewBag.MyText != null)
+    {
+        <p>Hello, @ViewBag.MyText!</p>
+    }
+</div>
