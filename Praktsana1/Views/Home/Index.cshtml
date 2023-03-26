@@ -3,12 +3,12 @@
 }
 
 <div class="text-center">
-    <form asp-action="MyAction" method="post">
-        <input type="text" name="myText" />
-        <input type="submit" value="Submit" />
-    </form>
- @if (ViewBag.MyText != null)
+    @using (Html.BeginForm("Register", "Home", FormMethod.Post))
     {
-        <p>Hello, @ViewBag.MyText!</p>
+        <div>Name:</div>
+        <div>@Html.TextBox("Name")</div>
+        <br />
+        <div><button type="submit">Submit</button></div>
     }
+
 </div>

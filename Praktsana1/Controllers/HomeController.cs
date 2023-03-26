@@ -14,10 +14,15 @@ namespace Praktsana1.Controllers
         }
        
 
-        public IActionResult MyAction(string myText)
+        public IActionResult MyAction()
         {
-            ViewBag.MyText = myText;
-            return View("Index");
+            
+            return View();
         }
+        public IActionResult Register(User user)
+        {
+            return View(user);
+        }
+
     }
 }
